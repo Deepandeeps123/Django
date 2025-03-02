@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration-line: none;
+}
+
+
+.outer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lightblue;
+}
+
+
+.inner{
+    height: 600px;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+
+.head{
+    height: 80px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
+    /* background-color: blue; */
+}
+
+
+.box{
+    height: 470px;
+    width: 400px;
+    gap: 50px;
+    display: flex;
+    /* background-color: yellow; */
+}
+
+
+
+label{
+    font-size: 20px;
+}
+input{
+    height: 40px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+.file{
+    height: 40px;
+    border: 2px solid black;
+}
+
+
+#btn{
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+    color: white;
+    background-color:blue;
+}
+#a{
+    color: white;
+}
+
+
+.footer{
+    height: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    font-size: 15px;
+    /* background-color: yellow; */
+}
+
+
+
+.button{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+
+/* signup */
+
+
+@media only screen and (max-width:767px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration-line: none;
+    }
+    .outer{
+        height: 100vh;
+        background-color:lightblue;
+    }
+    /* .inner{
+        height: 400px;
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: rgb(230, 23, 23);
+    } */
+    .head{
+        height: 80px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 8px;
+        /* background-color: blue; */
+    }
+
+}
+
+
+/* home */
+
+
+@media only screen and (max-width:767px){
+    
+
+
+}    
+
+

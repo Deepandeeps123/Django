@@ -1,0 +1,50 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="head">
+                <h1>Sign Up</h1>
+                <p>SignUp to MyApp</p>
+            </div>
+            <div class="box">
+                <form action="submit" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="" placeholder="Enter your name" required><br>
+                    <label for="phno">Phone_Number</label><br>
+                    <input type="tel" name="phno" id="" placeholder="Enter your phno" required><br>
+                    <label for="pass">Password</label><br>
+                    <input type="password" name="pass" id="" placeholder="Enter your password" required><br>
+                    <label for="image">Upload Image</label><br>
+                    <div class="file">
+                        <input type="file" name="image" id="" required><br>
+                    </div>
+                    <label for="file">Upload Photo</label><br>
+                    <div class="file">
+                        <input type="file" name="file" id="" required><br>
+                    </div>
+
+                    <!-- <button id="btn"><a id="a" href="">Create Acoount</a></button> -->
+                    <div class="button">
+                        <button id="btn">CREATE ACCOUNT</button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="footer">
+                <p>Already Have An Account ? <a href="login">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
