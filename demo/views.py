@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
+
 
 def first(request):
     return render(request,'first.html')
@@ -32,7 +33,8 @@ def password_validation(password):
 from demo.models import customers
 
 def signup(request):
-    return render(request,'signup.html')
+    return redirect(request,'signup.html')
+    # return redirect('/')
 
 
 def submit(request):
@@ -83,11 +85,22 @@ def verify(request):
             for i in check:
                 if i.password==password:
                     # return HttpResponse("Hello")
-                    return render(request,'homepage.html',{'d':validate})
-                else:
-                    return HttpResponse("Wrong Password")
-    else:
-        return render(request,'signup.html') 
+                    # ! 
+                    # return render(request,'homepage.html',{'d':validate})
+                    
+                    # !
+                    return render(request,'homepage.html')
+            else:
+                # return HttpResponse("Wrong Password")
+                return render(request,'login.html',{'error':'username or password is wrong'})
+            
+            
+            
+    # !
+    # else:
+    #     return render(request,'signup.html') 
+    
+    # !
     
     
 def home(request):
@@ -102,4 +115,29 @@ def about(request):
 
 def document(request):
     return render(request,'document.html')
+
+
+
+
+
+
+
+def signup_regdirect(request):
+    return render(request,'signup.html')
+
+# login page
+# photo and resume view
+
+
+
+# ! photo
+
+
+
+def photo(request):
+    a=customers.objects.all()
+    return render(request,'photo.html',{'res':a})
+
+
+
     

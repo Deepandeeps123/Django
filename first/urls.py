@@ -25,6 +25,8 @@ from django.conf import settings
 from demo.views import *
 
 urlpatterns = [
+    
+    # use change the admin name
     path('admin/', admin.site.urls),
     path('',first),
     path('signup',signup),
@@ -33,10 +35,19 @@ urlpatterns = [
     path('about',about),
     path('home',home),
     path('Document',document),
+    # path('login/signup_regdirect',signup_regdirect),
     
     
     
     
     # path('verify',verify),
     path('login/verify',verify) ,
+    
+    
+    
+    
+    
+    # ! document phot view
+    
+    path('photo',photo),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

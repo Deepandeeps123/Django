@@ -49,6 +49,14 @@
     background-color: white;
 }
 
+a:hover{
+
+
+    color: green;
+    background-color: yellow;
+
+}
+
 
 
 
@@ -145,4 +153,11 @@
     
 
 
-} 
+}
+
+
+.middle{
+    height: 100px;
+    width: 50%;
+    background-color: yellow;
+}
